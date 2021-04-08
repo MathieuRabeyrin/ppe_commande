@@ -40,12 +40,11 @@
                 $_SESSION["error"] = "Le champ addresse est obligatoire";
                 return FALSE;
             }
-            $_SESSION['address'] = $this->address;
             return TRUE;
         }
 
         public function isValid()
-        {   
+        {
             if ($this->updateSession() && $this->checkAddress())
                 return TRUE;
             return FALSE;

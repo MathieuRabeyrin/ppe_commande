@@ -15,6 +15,7 @@
 
         $products = array_slice($_POST, 0, count($_POST) - 1);
         $form = new Form($products, $_POST['address']);
+        $_SESSION['address'] = $_POST['address'];
         return $form->isValid();
     }
 
